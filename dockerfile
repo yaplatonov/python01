@@ -1,6 +1,10 @@
 FROM python:3
 
-WORKDIR app
-COPY . .
+FROM python:3
 
-CMD [ "python", "./python-hello.py" ]
+WORKDIR /usr/src/app
+
+
+COPY . /app
+
+CMD [ "python", "/app/hello.py" ]
